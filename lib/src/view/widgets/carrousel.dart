@@ -1,35 +1,32 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
 
+class carroussel extends StatefulWidget {
+  List<String>? urlImagens;
+  bool automatico;
 
-class Carousel extends StatefulWidget {
- List<String>? urlImagens; 
- bool automatico;
-
-  Carousel({super.key, this.urlImagens,this.automatico = false}); 
+  carroussel({super.key, this.urlImagens, this.automatico = false});
 
   @override
-  CarouselState createState() => CarouselState();
+  carrousselState createState() => carrousselState();
 }
 
-class CarouselState extends State<Carousel> {
+class carrousselState extends State<carroussel> {
   final List<String> imagensPadrao = [
     'https://picsum.photos/seed/picsum/200/300',
     'https://picsum.photos/id/237/200/300',
     'https://picsum.photos/200/300/?blur=5'
   ];
 
-  late List<String> urlImagens; 
+  late List<String> urlImagens;
 
   int atual = 0;
-  
 
   @override
   void initState() {
     super.initState();
-    urlImagens = widget.urlImagens ?? imagensPadrao; 
+    urlImagens = widget.urlImagens ?? imagensPadrao;
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +40,7 @@ class CarouselState extends State<Carousel> {
               autoPlay: widget.automatico,
               viewportFraction: 0.9,
               aspectRatio: 16 / 9,
-              padEnds: false,         
+              padEnds: false,
               onPageChanged: (index, reason) {
                 setState(() {
                   atual = index;
@@ -58,7 +55,6 @@ class CarouselState extends State<Carousel> {
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
-            
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),

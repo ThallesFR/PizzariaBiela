@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pizzaria_cod/theme/app_color.dart';
+import 'package:pizzaria_biella/theme/app_color.dart';
 
 const texto_1 = TextStyle(
   fontSize: 20,

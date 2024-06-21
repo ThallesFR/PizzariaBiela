@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pizzaria_cod/src/view/widgets/carrousel.dart';
-import 'package:pizzaria_cod/src/view/widgets/items.dart';
-import 'package:pizzaria_cod/src/view/widgets/widget_inferior.dart';
-import 'package:pizzaria_cod/src/view/widgets/widget_superior.dart';
+import 'package:pizzaria_biella/src/model/interface_item.dart';
+import 'package:pizzaria_biella/src/view/widgets/carrousel.dart';
+import 'package:pizzaria_biella/src/view/widgets/itens.dart';
+import 'package:pizzaria_biella/src/view/widgets/widget_inferior.dart';
+import 'package:pizzaria_biella/src/view/widgets/widget_superior.dart';
 
 void main() {
   runApp(Home());
@@ -28,17 +29,16 @@ class Home_ extends StatelessWidget {
       appBar: const NavBarSuperior(mostrarSeta: true),
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-        child:
-      Column(
-        
-        children: [
-          Carousel(),
-          Items(),
-          Items(titulo: 'Seus ultimos pedidos',)
-        ],
-      
-      ),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Column(
+          children: [
+            carroussel(),
+            itens(),
+            itens(
+              titulo: 'Seus ultimos pedidos',
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: const NavBarInferior(),
     );

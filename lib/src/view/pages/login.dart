@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pizzaria_cod/src/view/widgets/entrar.dart';
-import 'package:pizzaria_cod/src/view/widgets/inputs.dart';
-import 'package:pizzaria_cod/theme/app_color.dart';
+import 'package:pizzaria_biella/src/view/widgets/entrar.dart';
+import 'package:pizzaria_biella/src/view/widgets/inputs.dart';
+import 'package:pizzaria_biella/theme/app_color.dart';
 
 void main() {
   runApp(const Login());
@@ -43,9 +43,9 @@ class Login_ extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 40),
-               inputs('E-mail'),
+                inputs('E-mail'),
                 const SizedBox(height: 20),
-               inputs('Senha', senha: true),
+                inputs('Senha', senha: true),
                 const SizedBox(height: 30),
                 botao('Entrar'),
                 const SizedBox(height: 20),
@@ -74,6 +74,3 @@ class Login_ extends StatelessWidget {
     );
   }
 }
-
-
-
