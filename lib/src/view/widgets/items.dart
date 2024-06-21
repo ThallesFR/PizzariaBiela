@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:pizzaria_cod/src/model/interface_item.dart';
+import 'package:pizzaria_biella/src/model/interface_item.dart';
 
 
 class Items extends StatelessWidget {
