@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pizzaria_biella/src/model/interface_item.dart';
 import 'package:pizzaria_biella/src/view/widgets/carrousel.dart';
 import 'package:pizzaria_biella/src/view/widgets/itens.dart';
 import 'package:pizzaria_biella/src/view/widgets/widget_inferior.dart';
